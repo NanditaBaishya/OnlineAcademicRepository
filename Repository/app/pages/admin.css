@@ -1,0 +1,9 @@
+.navbar-link {padding: 0px 10px }
+#logo {height:40px; width:60px;}
+#bg1 {height: 1200px ;width: 1200px;}
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+#logout {float: right}
+#info {padding-top: 30px;}
+.navbar-link {color: grey;}

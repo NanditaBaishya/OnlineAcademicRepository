@@ -1,0 +1,41 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/inbox.css">
+	<link rel="stylesheet" type="text/css" href="/navbar.css">
+	<title>Home</title>
+</head>
+<body>
+	<%- include navbar.ejs -%>
+		<div id="msgs">
+			<%if(typeof msg!="undefined"){%>
+					<%if(msg.length>0){%>
+						<table class="t table">
+							<thead>
+								<td>Subject</td>
+								<td>Message</td>
+								<td></td>
+							</thead>
+							<tbody>
+							<%msg.forEach(
+						function(row){%>
+						<tr>
+								<td><%=row.subject%></td>
+								<td class="msg"><%=row.msg%></td>
+								<td> <form method="POST" action="/mdelete/<%=row._id%>?_method=DELETE">
+										<button type = "submit" class="btn" >Delete</input>
+									</form>
+								 </td>
+						</tr>
+						<%})%>
+							</tbody>
+						</table>	
+					</div>
+					<%}else{%>
+					
+				 	
+				 		<center>No messages</center>
+			 		
+					 <%}}%> 
+		</div>
+
+</body>
+</html>

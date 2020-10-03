@@ -1,0 +1,55 @@
+ul.navbar-nav li a {
+	color: white;
+}
+
+#logout {
+	display: block;
+	float: right;
+}
+
+ul.navbar-nav li a:hover {
+	color: grey;
+}
+
+.navbar-link {padding: 0px 10px }
+
+#logo {height:40px; width:60px;}
+
+
+#top {
+	border: 2px solid black;
+	background-color: rgba(0,0,0,.85);	
+}
+
+
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+body{
+	background-color: rgba(100,100,100,0.35);
+}
+
+#logout a {
+	color : white;
+}
+
+#repo {
+	margin-top: 0.5%;
+	color : white;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	display: block;
+	float: left;
+}
+
+#info {padding-top: 30px;}
+.navbar-link {color: grey;}
+#nav{
+	display: inline-block;
+	float: right;
+}
+#sort {
+	background-color: rgba(100,100,100,0.5);
+}
+body {
+	background-color: rgba(100,100,100,0.9);
+}

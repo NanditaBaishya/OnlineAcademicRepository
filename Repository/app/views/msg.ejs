@@ -1,0 +1,23 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/msg.css">
+	<title>Home</title>
+</head>
+<body>
+	<div id="center">
+		
+		<form method ="POST" action="/msg" class="form">
+			<% if(typeof data!="undefined"){ %>
+				To : <select name="name">
+						<option value="<%=data.username %>"><%=data.username%></option>
+					</select>
+			<% } %>
+			<br>
+			<label>Subject</label>
+			<input type="text" name="subject" class="form-control">
+			<label>Messge</label>
+			<textarea name="msg" class="form-control"></textarea>
+			<input type="submit">
+		</form>
+	</div>
+</body>
+</html>

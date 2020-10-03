@@ -1,0 +1,149 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: rgba(100,100,100,0.9);
+}
+
+.custom-select {
+	width : 150px;
+}
+
+#repo {
+	margin-top: 2%;
+	color : white;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	display: inline-block;
+	float: left;
+}
+
+#ann {
+	display: inline-block;
+	float: left;
+	margin: 5px 10% 5px 10%;
+}
+
+#ann a {
+	color: black;
+}
+
+#signin {
+	display: block;
+	float: right;
+	margin-top:2%;
+}
+
+.signin { 
+	color:white;
+}
+
+a:hover {
+	color : white;
+}
+
+#top {
+	height: 10%;
+	border: 2px solid black;
+	background-color: rgba(0,0,0,.85);	
+}
+
+#sort {
+	height: 50px;
+	background-color: rgba(100,100,100,0.5);
+	display:block;
+}
+
+a {
+	color : black;
+}
+
+.input {
+	width: 150px;
+	margin-top: 3%;
+	border-radius: 30px;
+}
+
+.items {
+	border:1px solid black ;
+	padding: 5px;
+	margin: 5px;
+	width : 140px;
+	height :140px;
+	float : left;
+	background-image: linear-gradient(white,grey);
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	border-top: 2px solid white;
+	background-color: black;
+}
+
+.list {
+	color:white;
+	display: inline-block;
+	width: 50%;
+	float: left;
+	margin-top: 1%;
+	padding-bottom: 10px;
+}
+
+#listt {
+	width: 80%;
+	margin : 0 10%;
+	height: 500px;
+	overflow: auto;
+}
+
+hr {
+
+	border: 1px solid white;
+}
+
+.list a {
+	margin-right: 10%;
+	color : white;
+	float: right;
+}
+
+.name{
+	vertical-align: middle;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	height:60%;
+	display: inline-block;
+}
+.main {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#search {
+	display:inline-block;
+	float: right;
+
+}
+
+#sorting {
+	display: inline-block;
+	float: left;
+}
+
+
+.input1 {
+	margin-bottom: 3%;
+}
+.files {
+	margin-top: 2%;
+	display: inline-block;
+	float: left;
+	height: 100%;
+}
+
+#icon {
+	width: 40%;
+}

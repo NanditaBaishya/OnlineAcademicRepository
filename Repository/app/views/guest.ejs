@@ -1,0 +1,36 @@
+<%- include header.ejs -%>
+
+<title>Home</title>
+</head>
+<body>
+	<!-- <div class="jumbotron" id="jumb">
+		<h3>Repository</h3>
+	</div>  -->
+	<%- include navbar.ejs -%>
+	
+	<div id ="files"class="container">
+		<% if(files){ %>
+			<% files.forEach(function(file){ %>
+				<div class="filelist">
+					<div class="filesub">
+						<%= file.filename %>
+						<%= file._id %>
+					</div>
+					<div class="filesub">
+						<form method="post" action="/files/<%= file._id %>?_method=DELETE">
+						<button class="btn btn-danger delete">Delete</button>
+						<button class="btn btn-danger delete"><a href="f/<%= file._id %>">Download</a></button>
+					</form>
+					</div>
+				</div>
+				
+			<% }) %>
+		<% } else { %>
+			<p>No files to show</p>
+		<% } %>
+	</div>
+
+	
+
+</body>
+</html>

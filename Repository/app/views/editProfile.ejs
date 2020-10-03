@@ -1,0 +1,30 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/userHome.css">
+	<link rel="stylesheet" type="text/css" href="/profile.css">
+	<link rel="stylesheet" type="text/css" href="/navbar.css">
+	<title>Home</title>
+</head>
+<body>
+	<%- include navbar.ejs -%>
+	<div class="container-fluid">
+	<div class="left container">
+		<img src="img/logo.png">
+		<form method="POST" action="/uploadDp">
+			<input type="file" name="dp">
+			<button class="btn" type="submit">Upload</button>
+		</form>
+	</div>
+	<div class ="right">
+		<form method = "POST" action="/editProfile">
+			<label>Email-Id</label>
+			<input class="form-control" type="text" name="email" placeholder="Enter new email">
+			<label>New password</label>
+			<input class="form-control"type="password" name="pswd1" placeholder="Enter new password">
+			<label>Re-enter new pass</label>
+			<input class="form-control" type="password" name="pswd2" placeholder="Re-enter new password">
+			<input type="submit" class="btn-secondary">
+		</form>
+	</div>
+	</div>
+</body>
+</html>

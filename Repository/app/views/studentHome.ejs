@@ -1,0 +1,115 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/studentHome.css">
+	<title>Home</title>
+</head>
+<body>
+	<div id="top" class="container-fluid">
+	<a href="/homeicon">
+	<div id="repo">
+	 REPOSITORY
+	</div>	
+	 </a>
+	<div id="signin">
+		<a class="signin" href="/login">
+			Sign In
+		</a>
+	</div>
+	</div>
+	
+	<div class="container-fluid" id="sort">
+		<div id="sorting">
+			<form method="POST" action="/sort">
+			<select class="custom-select" name="sorting"> 
+				<option value="newest">
+						By Newest
+				</option>
+				<option value="oldest">
+					By oldest
+				</option>
+			</select>
+			<button type="submit" class="btn">
+				Sort
+			</button>
+			</form>
+
+		</div>
+		<div id="ann">
+			<a href="/snotice">ANNOUNCEMENTS</a>
+		</div>
+
+		<div id="search">
+			<form class="form" method="POST" action="/search">
+			<input name="search" class= "input" type="text" placeholder="  Search here">
+			<button type="submit" class="btn input1">
+				Search
+			</button>
+			</form>
+		</div>
+
+	</div>
+	
+	<div class="container-fluid main">
+
+		<div class="files">
+			<%if(typeof allFiles!="undefined"){%>
+					<%if(allFiles.length>0){%>
+					
+					<%allFiles.forEach(function(row){%>
+					<div class="card items">
+					<div>
+						<img id="icon" src="img/pdf.png">
+					</div>
+						<div class="">
+							<a class="name" href="/download/<%= row._id %>">
+							<%=row.filename%>
+							</a>
+						</div>
+					
+					</div>
+					<%})}else{%>
+				 	
+				 		<center>No records</center>
+			 		
+					 <%}}%> 
+		</div>
+	</div>
+
+	<div class="container-fluid main">
+
+		<div id="listt">
+			<%if(typeof teachers!="undefined"){%>
+					<%if(teachers.length>0){%>
+					<table  class="table table-striped table-bordered">
+					<thead>
+						<td>NAME</td>
+						<td>EMAIL</td>
+						<td>DEPARTMENT</td>
+						<td></td>
+					</thead>
+					<tbody>
+					<%teachers.forEach(function(row){%>
+					<tr>
+						<td><%=row.username %></td>
+						<td><%=row.email %></td>
+						<td><%=row.department %></td>
+						<td><a href="/msg/<%=row.id%>">Send message</a></td>
+					</tr>
+					<%})}%>
+			 		</tbody>
+			 		</table>
+					 <%}%> 
+		</div>
+	</div>
+
+	<div class="footer container-fluid">
+		<div class="list">
+			<a href="/getTs">
+				Teachers
+			</a>
+		</div>
+		<div class="list">
+			About us
+		</div>
+	</div>
+</body>
+</html>

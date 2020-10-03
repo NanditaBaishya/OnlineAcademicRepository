@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/sadmin.css">
+	<script src= 
+	"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+	<title>Admins</title>
+</head>
+<body>
+	<!-- <div class="container">
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped" id="employee_table">
+				<tr>
+					<th>User Name</th>
+					<th>Created on</th>
+				</tr>
+			</table>
+		</div>
+	</div> -->
+	<div id="display"></div>
+	<script type="text/javascript">
+	$(document).ready(()=>{
+		var employee_data= '';
+		$.getJSON('/sadmin',(data)=>{
+			$('#display').html('<p> Username : '+data;
+			$('#display').append('<p>Created On : '+data.createdOn);
+		});
+	});
+	</script>
+</body>
+</html>

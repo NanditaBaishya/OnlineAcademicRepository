@@ -1,0 +1,100 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/admin.css">
+	<title>Home</title>
+</head>
+<body>
+	<!-- <div class="jumbotron" id="jumb">
+		<h3>Repository</h3>
+	</div>  -->
+	<nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#target">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="target">
+		<a class=navbar-brand><img id="logo" src="/img/logo.png"></a>
+		<span class="navbar-text"><%=id%></span>
+		
+		</div>
+		<a id="logout" class="navbar-link" href="#"><button class="btn"><a href="/logout">Logout</button></a>
+	</nav>
+	<div class="container-fluid" id="createAccount">
+		<a href="/adminSignup">Create Admin</a>
+	<div class="container-fluid" id="info">
+	<ul class="list">
+		<li>
+			<a href="/sadmin">Show Admins</a>
+			<table class="table table-striped table-primary">
+			<tbody>
+				<%if(typeof records!="undefined"){%>
+				<%if(records.length>0){%>
+				<%records.forEach(function(row){%>
+				<tr>
+					<td><%=row.userId%></td>
+					<td><%=row.createdOn%></td>
+				</tr>
+				 <%})}else{%>
+			 	<tr>
+			 		<td colspan="2">No records</td>
+			 	</tr>
+			 <%}}%> 
+			</tbody>
+			</table>
+		</li>
+		<li>
+			<a href="/steacher">Show Teachers</a>
+			<table class="table table-striped table-primary">
+			<thead>
+				<%if(typeof records2!="undefined"){%>
+				<th>
+					<%=title2%>
+				</th>			
+			</thead>	
+				<%if(records2.length>0){%>
+			<tbody>
+				<%records2.forEach(function(row){%>
+				<tr>
+					<td><%=row.email%></td>
+					<td><%=row.createdOn%></td>
+				</tr>
+				 <%})}else{%>
+			 	<tr>
+			 		<td colspan="2">No records</td>
+			 	</tr>
+			 <%}}%> 
+			</tbody>
+			</table>
+		</li>
+		<li>
+			<a href="/skeys">Show Keys</a>
+			<table class="table table-striped table-primary">
+			<thead>
+				<%if(typeof records3!="undefined"){%>
+				<th>
+					<%=title3%>
+				</th>			
+			</thead>	
+				<%if(records3.length>0){%>
+			<tbody>
+				<%records3.forEach(function(row){%>
+				<tr>
+					<td><%=row.key%></td>
+				</tr>
+				 <%})}else{%>
+			 	<tr>
+			 		<td colspan="2">No records</td>
+			 	</tr>
+			 <%}}%> 
+			</tbody>
+			</table>
+		<li>
+			<form method="post" action="/createKey">
+				<input type="text" name="newKey" >
+				<button type="submit">create key</button>
+			</form>
+		</li>
+	</ul>
+	</div>
+
+</body>
+</html>

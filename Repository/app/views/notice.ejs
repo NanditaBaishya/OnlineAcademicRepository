@@ -1,0 +1,15 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/userHome.css">
+	<link rel="stylesheet" type="text/css" href="/profile.css">
+	<link rel="stylesheet" type="text/css" href="/navbar.css">
+	<title>Home</title>
+</head>
+<body>
+	<%- include navbar.ejs -%>
+	<form method="POST" action="/notice">
+		<label>Notice</label>
+		<input  class="form-control"type="textarea" name="notice">
+		<button class="btn btn-secondary" type="submit">Post</button>
+	</form>
+</body>
+</html>

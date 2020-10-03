@@ -1,0 +1,48 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+
+label {
+	color: white;
+}
+
+#back {
+	height: 100%;
+	background-image : url('img/login.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#Welcome {
+	color : white;
+	padding : 2%; 
+	text-align: center;
+	background-color: rgba(100,100,100,.5);
+}
+
+#login {
+	margin:8% 12% 0% 12%;
+	border: 1px solid black;
+	padding: 5%;
+	width: 600px;
+	display: inline-block;
+	background-color: rgba(100,100,100,.5);
+}
+
+#right {
+	display: inline-block;
+	float: left;
+	margin : 2% 3% 5% 12%;
+	width: 70%;
+	color: white;
+}
+
+#signup {
+	margin-bottom: 1.5px; 
+	padding: 2%;
+	font-size: 18px;
+	text-decoration : underline;
+}

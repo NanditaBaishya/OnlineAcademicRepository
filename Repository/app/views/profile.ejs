@@ -1,0 +1,35 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/userHome.css">
+	<link rel="stylesheet" type="text/css" href="/profile.css">
+	<link rel="stylesheet" type="text/css" href="/navbar.css">
+	<title>Home</title>
+</head>
+<body>
+	<%- include navbar.ejs -%>
+	<div class="container-fluid">
+	<div class="left container">
+		<img src="img/logo.png">
+	</div>
+	<div class ="right">
+		<% if(data!="undefined"){ %>
+				
+				Username   : <%=data.username %>
+				<hr>
+				Name       : <%=data.name %>
+				<hr>
+				Department : <%=data.username %>
+				<hr>
+				Email Id   : <%=data.email %>
+				<br>
+				<div class="edit">
+					<a href="/editProfile">
+						<button type="button" class="btn but" >
+						Edit 
+						</button>
+					</a>
+				</div>
+		<% } %>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/fileList.css">
+	<link rel="stylesheet" type="text/css" href="/navbar.css">
+	<title>Home</title>
+</head>
+<body>
+	<%- include navbar.ejs -%>
+	<div class ="content conatiner-fluid">
+				
+					
+					<%if(typeof files!="undefined"){%>
+					<%if(files.length>0){%>
+					
+					<%files.forEach(function(row){%>
+					<div class="container-fluid">
+					<div class="card items">
+						<div clas="card-body name">
+						<a href="/download/<%= row._id %>">
+							<td><%=row.filename%></td>
+						</a>
+						</div>
+
+					</div>
+					<div class="del">
+						<form class="del" method= "POST" action="/delete/<%= row._id %>?_method=DELETE">
+								<button type="submit" class=" delete btn btn-danger">X</button>
+							</form>
+					</div>
+					</div>
+					 <%})}else{%>
+				 	
+				 		<center>No records</center>
+			 		
+				 	<%}}%> 
+				
+		
+	
+	</div>
+
+</body>
+</html>

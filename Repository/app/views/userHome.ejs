@@ -1,0 +1,87 @@
+<%- include header.ejs -%>
+	<link rel="stylesheet" type="text/css" href="/userHome.css">
+	<link rel="stylesheet" type="text/css" href="/navbar.css">
+	<title>Home</title>
+</head>
+<body>
+	<%- include navbar.ejs -%>
+	
+	<div class="container-fluid main">
+		<div class="container-fluid" id="sort1">
+			<div id="sorting">
+				<form method="POST" action="/tsort">
+					<select class="custom-select" name="sorting"> 
+						<option value="newest">
+							By Newest
+						</option>
+						<option value="oldest">
+							By oldest
+						</option>
+					</select>
+					<button type="submit" class="btn">
+						Sort
+					</button>
+				</form>
+			</div>
+			<div id="search">
+				<form class="form" method="POST" action="/tsearch">
+					<input name="search" class= "input" type="text" placeholder="  Search here">
+					<button type="submit" class="btn input1">
+					Search
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+		<div class="files">
+			<%if(typeof allFiles!="undefined"){%>
+					<%if(allFiles.length>0){%>
+					
+					<%allFiles.forEach(function(row){%>
+					<div class="card items">
+					<div>
+						<img id="icon" src="img/pdf.png">
+					</div>
+					<a href="/download/<%= row._id %>">
+						<div class="name">
+							<%=row.filename%></td>
+						</div>
+					</a>
+					
+					</div>
+					<%})}else{%>
+				 	
+				 		<center>No records</center>
+			 		
+					 <%}}%> 
+		</div>
+		<div class="content">
+		<table class="table table-secondary">
+			<thead>
+				Recent Files
+			</thead>
+			<tbody>
+				<%if(typeof files!="undefined"){%>
+				<%if(files.length>0){%>
+				<% var count = 0; %>
+				<%for(var l =files.length,i=0;i<l;i++){%>
+				<% row = files[i] %>
+				<tr>
+					<% if(count == 3){%>
+					<% break %>
+					<%}%>
+					<td><%=row.filename%></td>
+					<% count++ %>
+				</tr>
+				 <%}}else{%>
+			 	<tr>
+			 		<td colspan="2">No records</td>
+			 	</tr>
+			 <%}}%> 
+			</tbody>
+		</table>
+		</div>
+	</div>
+
+</body>
+</html>

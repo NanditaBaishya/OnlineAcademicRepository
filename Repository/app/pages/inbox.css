@@ -1,0 +1,23 @@
+body {
+	background-color: rgba(100,100,100,.9);
+	color : white;
+}
+
+#msgs {
+	padding: 10px 5% 4% 5%; 	
+
+}
+
+.t {
+	background-color: rgba(0,0,0,.4);
+	color: white;
+	border-radius: 20px;
+	margin-right: 5%;
+	table-layout: fixed;
+}
+
+table tr td.msg {
+	overflow: auto;
+	width: 500px;
+}
+

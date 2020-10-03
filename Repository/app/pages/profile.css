@@ -1,0 +1,30 @@
+.left {
+	display :inline-block;
+	float : left;
+	width : 200px;
+	border: 1px solid white;
+	margin-top: 2%;
+}
+
+.left img {
+	width: 150px;
+}
+
+.right {
+	display : inline-block;
+	float : left;
+	margin : 2% 10% 5% 10%;
+	padding : 5% 12% 5% 12%;
+	border : 1px solid white;
+	color :white;
+}
+
+.edit {
+
+	display: inline-block;
+	float: right;
+}
+
+.but {
+	text-decoration: underline;
+}
